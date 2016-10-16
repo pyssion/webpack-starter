@@ -3,6 +3,7 @@
 **/
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 
 const App = ({ title = 'Hello, World!' }) => (
   <div>{title}</div>
@@ -12,4 +13,11 @@ App.propTypes = {
   title: React.PropTypes.string,
 }
 
-ReactDOM.render(<App title="Hello from Pyssion in AnYang, again!" />, document.getElementById('app'))
+const AppRouter = (
+  <Router history={browserHistory}>
+    <Route path="/" component={App} />
+  </Router>
+)
+
+ReactDOM.render(AppRouter, document.getElementById('app'))
+
