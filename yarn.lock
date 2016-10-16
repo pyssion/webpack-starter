@@ -809,6 +809,12 @@ cipher-base@^1.0.0, cipher-base@^1.0.1:
   dependencies:
     inherits "^2.0.1"
 
+clean-webpack-plugin:
+  version "0.1.13"
+  resolved "http://registry.cnpmjs.org/clean-webpack-plugin/download/clean-webpack-plugin-0.1.13.tgz#c2bae9bc4dd44348123ad98e19fa55e7a9b07600"
+  dependencies:
+    rimraf "~2.5.1"
+
 cliui@^2.1.0:
   version "2.1.0"
   resolved "http://registry.cnpmjs.org/cliui/download/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"

@@ -1,4 +1,10 @@
 const path = require('path')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+const BASE_DIR = path.resolve(__dirname)
+const SRC_DIR = path.resolve(BASE_DIR, 'app')
+const BUILD_DIR = path.resolve(BASE_DIR, 'build')
+const ENTRY = path.resolve(SRC_DIR, 'app.js')
 
 const babelLoader = {
   test: /\.js$/,
@@ -6,10 +12,9 @@ const babelLoader = {
   loader: "babel-loader",
 }
 
-const BASE_DIR = path.resolve(__dirname)
-const SRC_DIR = path.resolve(BASE_DIR, 'app')
-const BUILD_DIR = path.resolve(BASE_DIR, 'build')
-const ENTRY = path.resolve(SRC_DIR, 'app.js')
+const cleanPlugin = new CleanWebpackPlugin(BUILD_DIR, {
+  verbose: true, // Write logs to console.
+})
 
 module.exports = {
   entry: ENTRY,
@@ -20,4 +25,8 @@ module.exports = {
   module: {
     loaders: [babelLoader],
   },
+  plugins: [
+    cleanPlugin,
+  ],
 }
+

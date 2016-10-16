@@ -38,4 +38,19 @@ and the `.babelrc` config file
 }
 ```
 
+### Step 2 - Remove build files before a new build process
+
+Install the `clean-webpack-plugin`. [Referenc](https://github.com/johnagan/clean-webpack-plugin)e
+
+```shell
+yarn add --dev clean-webpack-plugin
+```
+
+and add the plugin config to the webpack config script
+
+```javascript
+new CleanWebpackPlugin(BUILD_DIR, {
+  verbose: true, // Write log to console.
+})
+```
 
