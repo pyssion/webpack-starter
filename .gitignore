@@ -5,7 +5,7 @@ npm-debug.log*
 
 # editors
 .idea
-.swp
+*.swp
 
 # build
 build/
