@@ -1,11 +1,12 @@
 const webpack = require('webpack')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const appFileName = 'index.js'
 const templateFile = 'assets/index.tpl'
 
 module.exports = (config) => {
-  const { srcDir, distDir, nodeModulesDir } = config
+  const { rootDir, srcDir, distDir, nodeModulesDir } = config
   return {
     // Webpack creates a graph of all your application's dependencies.
     // The starting point of this graph is known as an entry point.
@@ -57,6 +58,10 @@ module.exports = (config) => {
     },
 
     plugins: [
+      new CleanWebpackPlugin(distDir, {
+        root: rootDir,
+        verbose: true, // Write log to console.
+      }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: templateFile,
