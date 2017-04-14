@@ -2,8 +2,7 @@ import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 
 const reducers = combineReducers({
-  // ...reducers,
-  routing: routerReducer
+  router: routerReducer,
 })
 
 export default reducers

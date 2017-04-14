@@ -1,16 +1,49 @@
 const { resolve } = require('path')
+const webpack = require('webpack')
 
 const rootDir = __dirname
-const srcDir = resolve(__dirname, 'src')
-const distDir = resolve(__dirname, 'dist')
-const nodeModulesDir = resolve(__dirname, 'node_modules')
+const srcDir = resolve(rootDir, 'src')
+const distDir = resolve(rootDir, 'dist')
+// const nodeModulesDir = resolve(rootDir, 'node_modules')
+const appName = 'index.js'
+const port = 2017
 
-const buildConfig = (env) => require('./config/' + env + '.js')({
-  env,
-  rootDir,
-  srcDir,
-  distDir,
-  nodeModulesDir,
-})
+const basicConfig = {
+  // webpack创建依赖图的入口
+  entry: [
+    'react-hot-loader/patch',
+    `webpack-dev-server/client?http://localhost:${port}`,
+    'webpack/hot/only-dev-server',
+    resolve(srcDir, appName),
+  ],
+  // webpack生成打包后文件的处理配置
+  output: {
+    path: distDir,
+    publicPath: '/',
+    filename: '[name].js',
+  },
+  module: {
+    rules: [
+      { test: /.jsx?$/, use: ['babel-loader'], exclude: /node_modules/ },
+      { test: /.css$/, use: ['style-loader', 'css-loader?modules'] },
+    ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [srcDir, 'node_modules'],
+  },
+  devtool: 'cheap-module-eval-source-map',
+  // will be picked up by webpack-dev-server
+  devServer: {
+    hot: true,
+    contentBase: distDir,
+    historyApiFallback: true,
+    port,
+  },
+}
 
-module.exports = (env) => buildConfig(env)
+module.exports = basicConfig

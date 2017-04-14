@@ -10,6 +10,10 @@ npm-debug.log*
 # build
 dist/
 
+# notes
+concepts/
+notes/
+
 # Runtime data
 pids
 *.pid
