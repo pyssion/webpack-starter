@@ -26,11 +26,9 @@
     "webpack-dev-server": "2.4.2"
   },
   "scripts": {
-    "start-bak": "echo \"Run <npm run dev> to start dev server, or <npm run build> to build. Default running <npm run dev> now.\" && npm run dev",
-    "dev-bak": "webpack-dev-server --env=dev",
-    "build-bak": "webpack --env=prod",
-    "start": "webpack",
-    "dev": "webpack-dev-server"
+    "start": "echo \"Run <npm run dev> to start dev server, or <npm run build> to build. Default running <npm run dev> now.\" && npm run dev",
+    "dev": "webpack-dev-server",
+    "build": "webpack --config webpack.config.prod.babel.js"
   },
   "name": "webpack-starter",
   "version": "1.0.0",
