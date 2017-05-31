@@ -18,7 +18,19 @@ const basicConfig = {
   module: {
     rules: [
       { test: /.jsx?$/, use: ['babel-loader'], exclude: /node_modules/ },
-      { test: /.css$/, use: ['style-loader', 'css-loader?modules'] },
+      {
+        test: /.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
