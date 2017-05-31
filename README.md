@@ -25,3 +25,11 @@ Pyssion's webpack starter kit (with React ecosystem).
 - [ ] templates and code generation (yo?)
 - [ ] test
 - [ ] many other best practice
+
+## How the code is structured
+
+- src
+  - flux: action, reducers and selectors
+  - route: route configurations and layouts
+  - component: components (smart ones and dumb ones)
+  - store: contains basic store setup and all reducers (maybe middlewares?)

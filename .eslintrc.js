@@ -52,7 +52,7 @@ module.exports = {
     'use-isnan': 'error',
     'valid-jsdoc': 'warn',
     'valid-typeof': 'error',
-    'no-console': 'warn',
+
     // best practices
     'accessor-pairs': 'warn',
     'array-callback-return': 'off',
