@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import { Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 
-import App from 'basic/App'
-import store, { history } from './store'
+import App from 'sample/App'
+import store, { history } from 'store'
 
 const routes = (
   <Provider store={store}>

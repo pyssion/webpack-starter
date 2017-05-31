@@ -1,5 +1,5 @@
 import { render } from 'react-dom'
-import appRoutes from './routes'
+import appRoutes from 'route'
 
 render(
   appRoutes,
