@@ -52,6 +52,7 @@ module.exports = {
     'use-isnan': 'error',
     'valid-jsdoc': 'warn',
     'valid-typeof': 'error',
+
     // best practices
     'accessor-pairs': 'warn',
     'array-callback-return': 'off',
@@ -124,20 +125,216 @@ module.exports = {
     'wrap-iife': 'warn',
     yoda: 'off',
 
-    // others to deal with
-    indent: ['error', 2],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'never'],
+    // Variables
+    // init-declarations
+    'no-catch-shadow': 'warn',
+    'no-delete-var': 'error',
+    'no-label-var': 'error',
+    // no-restricted-globals
+    'no-shadow': 'warn',
+    'no-shadow-restricted-names': 'error',
+    'no-undef': 'error',
+    'no-undef-init': 'error',
+    'no-undefined': 'error',
+    'no-unused-vars': 'warn',
+    'no-use-before-define': 'error',
+
+    // Stylistic
+    'array-bracket-spacing': ['error', 'never'],
+    'block-spacing': ['error', 'always'],
+    'brace-style': ['error', '1tbs'],
+    'camelcase': 'error',
+    'capitalized-comments': 'off',
     // http://eslint.org/docs/rules/comma-dangle
     // tailing comma in function is not supported in eslint (yet), hence babel-eslint
     'comma-dangle': ['error', 'always-multiline'],
+    'comma-spacing': ['error', { before: false, after: true }],
+    'comma-style': ['error', 'last'],
+    'computed-property-spacing': 'error',
+    // consistent-this
+    'eol-last': ['error', 'always'],
+    'func-call-spacing': ['error', 'never'],
+    'func-name-matching': 'warn',
+    'func-names': ['error', 'as-needed'],
+    // func-style
+    // id-blacklist
+    // id-length
+    // id-match
+    indent: ['error', 2],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'keyword-spacing': ['error', { before: true, after: true }],
+    // line-comment-position
+    // linebreak-style
+    // lines-around-comment
+    // lines-around-directive
+    // max-depth
+    'max-len': ['error', 120],
+    // max-lines
+    // max-nested-callbacks
+    // max-params
+    // max-statements
+    // max-statements-per-line
+    // multiline-ternary
+    'new-cap': 'error',
+    'new-parens': 'error',
+    // newline-after-var
+    // newline-before-return
+    // newline-per-chained-call
+    'no-array-constructor': 'error',
+    // no-bitwise
+    'no-continue': 'warn',
+    // no-inline-comments
+    'no-lonely-if': 'error',
+    // no-mixed-operators
+    'no-mixed-spaces-and-tabs': 'error',
+    'no-multi-assign': 'error',
+    'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1 }],
+    'no-negated-condition': 'warn',
+    'no-nested-ternary': 'error',
+    'no-new-object': 'error',
+    'no-plusplus': 'error',
+    // no-restricted-syntax
+    'no-tabs': 'error',
+    // no-ternary
+    'no-trailing-spaces': 'error',
+    // no-underscore-dangle
+    'no-unneeded-ternary': 'error',
+    'no-whitespace-before-property': 'error',
+    'nonblock-statement-body-position': ['error', 'beside'],
+    'object-curly-newline': ['error', { multiline: true }],
+    'object-curly-spacing': ['error', 'always'],
+    // object-property-newline
+    // one-var
+    'one-var-declaration-per-line': 'error',
+    'operator-assignment': 'warn',
+    'operator-linebreak': ['error', 'before'],
+    'padded-blocks': 'off',
+    'quote-props': ['error', 'as-needed'],
+    'quotes': ['error', 'single'],
+    'require-jsdoc': ['warn', {
+      require: {
+        'FunctionDeclaration': true,
+        'MethodDefinition': false,
+        'ClassDeclaration': false,
+        'ArrowFunctionExpression': false,
+      },
+    }],
+    semi: ['error', 'never'],
+    // semi-spacing
+    'sort-keys': 'off',
+    'sort-vars': 'off',
+    'space-before-blocks': 'off',
+    'space-before-function-paren': 'error',
+    'space-in-parens': ['error', 'never'],
+    'space-infix-ops': 'error',
+    'space-unary-ops': ['error', { words: true, nonwords: true }],
+    'spaced-comment': ['error', 'always'],
+    // template-tag-spacing
+    // unicode-bom
+    'wrap-regex': 'off',
+
+    // ECMAScript 6
+    'arrow-body-style': ['error', 'as-needed'],
+    'arrow-parens': ['error', 'as-needed'],
+    'arrow-spacing': ['error', { before: true, after: true }],
+    'constructor-super': 'error',
+    'generator-star-spacing': ['error', { before: true, after: true }],
+    'no-class-assign': 'error',
+    'no-confusing-arrow': 'error',
+    'no-const-assign': 'error',
+    'no-dupe-class-members': 'error',
+    'no-duplicate-imports': 'error',
+    'no-new-symbol': 'error',
+    // no-restricted-imports
+    'no-this-before-super': 'error',
+    'no-useless-computed-key': 'error',
+    'no-useless-constructor': 'error',
+    'no-useless-rename': 'error',
+    'no-var': 'error',
+    'object-shorthand': ['error', 'always'],
+    'prefer-arrow-callback': 'error',
+    'prefer-const': 'error',
+    'prefer-destructuring': 'off',
+    'prefer-numeric-literals': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'warn',
+    'require-yield': 'warn',
+    'rest-spread-spacing': ['error', 'never'],
+    'sort-imports': 'off',
+    // symbol-description
+    'template-curly-spacing': ['error', 'never'],
+    'yield-star-spacing': ['error', { before: true, after: true }],
+
     /*****************************************************************
-    * react and jsx
+    * react and jsx - https://github.com/yannickcr/eslint-plugin-react
     *****************************************************************/
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
-    'react/jsx-uses-react': 'error',
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
+    'react/display-name': 'off',
+    'react/forbid-component-props': 'off',
+    'react/forbid-elements': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/forbid-foreign-prop-types': 'error',
+    'react/no-array-index-key': 'warn',
+    'react/no-children-prop': 'error',
+    'react/no-danger': 'error',
+    'react/no-danger-with-children': 'error',
+    'react/no-deprecated': 'error',
+    'react/no-did-mount-set-state': 'error',
+    'react/no-did-update-set-state': 'error',
+    'react/no-direct-mutation-state': 'error',
+    'react/no-find-dom-node': 'error',
+    'react/no-is-mounted': 'error',
+    'react/no-multi-comp': ['error', { ignoreStateless: true }],
+    // 'react/no-redundant-should-component-update': 'error',
+    'react/no-render-return-value': 'error',
+    'react/no-set-state': 'off',
+    'react/no-string-refs': 'error',
+    'react/no-unescaped-entities': 'error',
+    'react/no-unknown-property': 'error',
+    'react/no-unused-prop-types': 'error',
+    // 'react/no-will-update-set-state': 'error',
+    'react/prefer-es6-class': 'error',
+    'react/prefer-stateless-function': 'error',
+    'react/prop-types': 'error',
+    'react/react-in-jsx-scope': 'error',
+    'react/require-default-props': 'error',
+    'react/require-optimization': 'off',
+    'react/require-render-return': 'error',
+    'react/self-closing-comp': 'error',
+    'react/sort-comp': 'error',
+    'react/sort-prop-types': 'off',
+    'react/style-prop-object': 'error',
+    'react/void-dom-elements-no-children': 'error',
+
+    // JSX-specific
+    'react/jsx-boolean-value': ['warn', 'always'],
+    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+    'react/jsx-curly-spacing': ['error', 'never'],
+    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': 'off',
+    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    'react/jsx-handler-names': 'off',
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-key': 'error',
+    'react/jsx-max-props-per-line': 'off',
+    'react/jsx-no-bind': ['error', { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }],
+    'react/jsx-no-comment-textnodes': 'error',
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-literals': 'off',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-undef': 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-sort-props': 'off',
+    'react/jsx-space-before-closing': ['error', 'always'],
+    'react/jsx-tag-spacing': ['error', {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+    }],
     'react/jsx-uses-vars': 'error',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-wrap-multilines': 'error',
   },
 }
