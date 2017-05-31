@@ -34,7 +34,7 @@ module.exports = {
     'no-empty-character-class': 'error',
     'no-ex-assign': 'error',
     'no-extra-boolean-cast': 'warn',
-    'no-extra-parens': ['warn', { ignoreJSX: 'multi-line' }],
+    'no-extra-parens': ['warn', 'all', { ignoreJSX: 'multi-line' }],
     'no-extra-semi': 'warn',
     'no-func-assign': 'error',
     'no-inner-declarations': 'error',
@@ -52,7 +52,6 @@ module.exports = {
     'use-isnan': 'error',
     'valid-jsdoc': 'warn',
     'valid-typeof': 'error',
-    'no-console': 'warn',
     // best practices
     'accessor-pairs': 'warn',
     'array-callback-return': 'off',
