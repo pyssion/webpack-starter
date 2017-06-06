@@ -71,7 +71,8 @@ module.exports = {
     'no-case-declarations': 'warn',
     'no-div-regex': 'error',
     'no-else-return': 'warn',
-    'no-empty-function': 'warn',
+    // allow arrowFunctions to be empty for setting default values
+    'no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
     'no-empty-pattern': 'error',
     'no-eq-null': 'error',
     'no-eval': 'error',
@@ -160,7 +161,7 @@ module.exports = {
     // id-blacklist
     // id-length
     // id-match
-    indent: ['error', 2],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
@@ -202,7 +203,7 @@ module.exports = {
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
     'nonblock-statement-body-position': ['error', 'beside'],
-    'object-curly-newline': ['error', { multiline: true }],
+    'object-curly-newline': 'off', // 'object-curly-newline': ['error', { multiline: true }],
     'object-curly-spacing': ['error', 'always'],
     // object-property-newline
     // one-var
@@ -298,7 +299,8 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
-    'react/require-default-props': 'error',
+    // Not really a fan
+    'react/require-default-props': 'off', // 'react/require-default-props': 'error',
     'react/require-optimization': 'off',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
