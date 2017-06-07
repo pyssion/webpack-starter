@@ -310,7 +310,7 @@ module.exports = {
     'react/void-dom-elements-no-children': 'error',
 
     // JSX-specific
-    'react/jsx-boolean-value': ['warn', 'always'],
+    'react/jsx-boolean-value': ['warn', 'never'],
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-curly-spacing': ['error', 'never'],
     'react/jsx-equals-spacing': ['error', 'never'],
