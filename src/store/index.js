@@ -17,6 +17,12 @@ const store = createStore(
   ),
 )
 
+if (module.hot) { // eslint-disable-line no-undef
+  module.hot.accept('./reducer', () => { // eslint-disable-line no-undef
+    store.replaceReducer(reducers)
+  })
+}
+
 export default store
 
 export { history }

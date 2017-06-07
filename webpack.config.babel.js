@@ -13,8 +13,8 @@ const basicConfig = {
   // webpack创建依赖图的入口
   entry: [
     'react-hot-loader/patch',
-    `webpack-dev-server/client?http://localhost:${port}`,
-    'webpack/hot/only-dev-server',
+    // `webpack-dev-server/client?http://localhost:${port}`,
+    // 'webpack/hot/only-dev-server',
     resolve(srcDir, appName),
   ],
   // webpack生成打包后文件的处理配置
@@ -53,7 +53,8 @@ const basicConfig = {
   devtool: 'cheap-module-eval-source-map',
   // will be picked up by webpack-dev-server
   devServer: {
-    hot: true,
+    // hot: true,
+    hotOnly: true, // don't refresh when error happens
     contentBase: distDir,
     historyApiFallback: true,
     port,
