@@ -22,10 +22,10 @@
     "eslint": "3.19.0",
     "eslint-plugin-react": "7.0.1",
     "html-webpack-plugin": "2.28.0",
-    "react-hot-loader": "next",
+    "react-hot-loader": "v3.0.0-beta.7",
     "style-loader": "0.18.1",
-    "webpack": "2.3.3",
-    "webpack-dev-server": "2.4.2"
+    "webpack": "2.6.1",
+    "webpack-dev-server": "2.4.5"
   },
   "scripts": {
     "start": "echo \"Run <npm run dev> to start dev server, or <npm run build> to build. Default running <npm run dev> now.\" && npm run dev",
