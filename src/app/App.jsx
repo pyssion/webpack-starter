@@ -3,16 +3,16 @@ import { Provider } from 'react-redux'
 import { Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 
-import store, { history } from 'store'
+import store, { history } from './store'
 
 // landing page
-import Land from 'route/Land'
+import Land from './pages/Land'
 // main
-import Main from 'route/Main'
+import Main from './pages/Main'
 // about
-import About from 'route/About'
+import About from './pages/About'
 
-const routes = (
+const App = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>{/* Router only allow for ONE child */}
@@ -24,4 +24,4 @@ const routes = (
   </Provider>
 )
 
-export default routes
+export default App

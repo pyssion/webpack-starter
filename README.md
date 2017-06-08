@@ -33,3 +33,8 @@ Pyssion's webpack starter kit (with React ecosystem).
   - route: route configurations and layouts
   - component: components (smart ones and dumb ones)
   - store: contains basic store setup and all reducers (maybe middlewares?)
+
+- src # route directory for all source files
+  - app # app related files, including store, containers and layouts
+  - components # well styled components
+  - layout # page level components

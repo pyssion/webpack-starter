@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import UserAvatar from 'component/user/UserAvatar'
+import UserAvatar from 'app/user/containers/UserAvatar'
 
 const { string } = PropTypes
 

@@ -1,21 +1,21 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import appRoutes from './route'
+import App from 'app/App'
 
-const doRender = app => {
+const doRender = RootComponent => {
   render(
     <AppContainer>
-      {app}
+      <RootComponent />
     </AppContainer>,
     document.getElementById('app'),
   )
 }
 
-doRender(appRoutes)
+doRender(App)
 
 if (module.hot) { // eslint-disable-line no-undef
-  module.hot.accept('./route', () => { // eslint-disable-line no-undef
-    doRender(appRoutes)
+  module.hot.accept('app/App', () => { // eslint-disable-line no-undef
+    doRender(App)
   })
 }
