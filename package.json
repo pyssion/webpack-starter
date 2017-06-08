@@ -30,7 +30,8 @@
   "scripts": {
     "start": "echo \"Run <npm run dev> to start dev server, or <npm run build> to build. Default running <npm run dev> now.\" && npm run dev",
     "dev": "webpack-dev-server --progress",
-    "build": "webpack --config webpack.config.prod.babel.js"
+    "build": "webpack --config webpack.config.prod.babel.js",
+    "test": "node test"
   },
   "name": "webpack-starter",
   "version": "1.0.0",
