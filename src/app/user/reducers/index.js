@@ -1,6 +1,6 @@
-import constant from '../constant'
-const actionTypes = constant.action
-const userTypes = constant.type
+import constants from '../constants'
+const actionTypes = constants.action
+const userTypes = constants.type
 
 const initialUserState = {
   userType: userTypes.ANONYMOUS,
