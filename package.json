@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "echo \"Run <npm run dev> to start dev server, or <npm run build> to build. Default running <npm run dev> now.\" && npm run dev",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --progress",
     "build": "webpack --config webpack.config.prod.babel.js"
   },
   "name": "webpack-starter",
