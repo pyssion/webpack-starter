@@ -5,22 +5,22 @@ Pyssion's webpack starter kit (with React ecosystem).
 
 ## features
 
-- [ ] React with ES6 and JSX
+- [x] React with ES6 and JSX
 - [ ] React-Router with code splitting
-- [ ] Redux and reselect
+- [x] Redux and reselect
 - [ ] Rx.js for side effects
-- [ ] future ready CSS
-- [ ] configurable eslint
-- [ ] webpack based with HMR
+- [x] future ready CSS
+- [x] configurable eslint
+- [x] webpack based with HMR
 
 ## TODO
 
-- [ ] react, react-router, redux and their children
+- [x] react, react-router, redux and their children
 - [ ] Rx.js and more
-- [ ] CSS stuff
-- [ ] eslint configuration
+- [x] CSS stuff
+- [x] eslint configuration
 - [ ] webpack loaders and plugins
-- [ ] babel syntax preference
+- [x] babel syntax preference
 - [ ] standard components, containers, etc
 - [ ] templates and code generation (yo?)
 - [ ] test
