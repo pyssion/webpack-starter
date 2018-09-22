@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from 'app/App'
 
-const doRender = RootComponent => {
+export const doRender = RootComponent => {
   render(
     <AppContainer>
       <RootComponent />
